@@ -15,8 +15,6 @@ migrate = Migrate(app, db)
 
 api = Api(app)
 
-# import all models here
-
 
 class Home(Resource):
     def get(self):
