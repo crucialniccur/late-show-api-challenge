@@ -4,6 +4,7 @@ from sqlalchemy_serializer import SerializerMixin
 
 class Episode(db.Model, SerializerMixin):
     __tablename__ = "episodes"
+    serialize_rules = ('-appearances.episode',)
 
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.String, nullable=False)

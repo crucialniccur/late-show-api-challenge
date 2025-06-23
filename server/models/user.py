@@ -3,8 +3,8 @@ from sqlalchemy_serializer import SerializerMixin
 
 
 class User(db.Model, SerializerMixin):
-
-    __tablename__ = 'users'
+    __tablename__ = "users"
+    # serialize_rules = ('-some_relationship.user',)
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
