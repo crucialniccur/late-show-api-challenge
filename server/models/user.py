@@ -1,4 +1,4 @@
-from server.app import db
+from server.extensions import db
 
 
 class User(db.Model):
@@ -10,5 +10,3 @@ class User(db.Model):
 
     def __repr__(self):
         return f"<User {self.username}>"
-
-    # add serializermixin later for to_dict

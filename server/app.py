@@ -1,17 +1,17 @@
 from flask import Flask, make_response
-from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api, Resource
 from dotenv import load_dotenv
 
-load_dotenv()
+from server.extensions import db, migrate
+from server.models import User, Guest, Episode, Appearance
 
+load_dotenv()
 
 app = Flask(__name__)
 app.config.from_prefixed_env()
 
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+db.init_app(app)
+migrate.init_app(app, db)
 
 api = Api(app)
 

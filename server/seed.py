@@ -1,4 +1,5 @@
-from server.app import app, db
+from server.app import app
+from server.extensions import db
 from server.models import User, Guest, Episode, Appearance
 from faker import Faker
 import random
