@@ -13,6 +13,7 @@ flask-restful = "*"
 flask-migrate = "*"
 flask-sqlalchemy = "*"
 python-dotenv = "*"
+faker = "*"
 
 [dev-packages]
 
