@@ -7,6 +7,7 @@ from server.extensions import db, migrate
 from server.models import User, Guest, Episode, Appearance
 from server.controllers.guest_controller import Guests
 from server.controllers.episode_controller import Episodes, EpisodeByID
+from server.controllers.appearance_controller import Appearances
 
 from server.controllers.auth_controller import auth_bp
 
