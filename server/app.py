@@ -11,6 +11,10 @@ from server.controllers.episode_controller import Episodes, EpisodeByID
 
 load_dotenv()
 
+# replace with env var in production
+app.config['JWT_SECRET_KEY'] = 'super-secret-key'
+jwt = JWTManager(app)
+
 app = Flask(__name__)
 app.config.from_prefixed_env()
 
