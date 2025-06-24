@@ -1,6 +1,8 @@
 from flask import Flask, make_response
 from flask_restful import Api, Resource
 from dotenv import load_dotenv
+from flask_jwt_extended import JWTManager
+
 
 from server.extensions import db, migrate
 from server.models import User, Guest, Episode, Appearance
