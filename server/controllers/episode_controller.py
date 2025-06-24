@@ -2,6 +2,7 @@ from flask_restful import Resource
 from flask import request
 from server.models.episode import Episode
 from server.extensions import db
+from flask_jwt_extended import jwt_required, get_jwt_identity
 
 
 class Episodes(Resource):
