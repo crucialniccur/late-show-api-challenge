@@ -1,0 +1,140 @@
+{
+  "info": {
+    "name": "Late Show API Challenge",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "lateshow-api-collection"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"mati\",\n  \"password\": \"secret\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5555/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5555",
+          "path": ["register"]
+        }
+      }
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"mati\",\n  \"password\": \"secret\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5555/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5555",
+          "path": ["login"]
+        }
+      }
+    },
+    {
+      "name": "Get All Episodes",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5555/episodes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5555",
+          "path": ["episodes"]
+        }
+      }
+    },
+    {
+      "name": "Get Episode by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5555/episodes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5555",
+          "path": ["episodes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Episode (Protected)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <paste-your-token-here>"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5555/episodes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5555",
+          "path": ["episodes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get Guests",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5555/guests",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5555",
+          "path": ["guests"]
+        }
+      }
+    },
+    {
+      "name": "Create Appearance (Protected)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer <paste-your-token-here>"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"rating\": 5,\n  \"guest_id\": 1,\n  \"episode_id\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5555/appearances",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5555",
+          "path": ["appearances"]
+        }
+      }
+    }
+  ]
+}
