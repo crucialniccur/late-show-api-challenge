@@ -14,9 +14,14 @@ def seed():
         Guest.query.delete()
         Episode.query.delete()
         User.query.delete()
+        db.session.commit()
 
-        # Seed Users
-        users = [User(username=fake.user_name()) for _ in range(5)]
+        # Seed Users with passwords
+        users = []
+        for _ in range(5):
+            user = User(username=fake.user_name())
+            user.set_password("password123")
+            users.append(user)
         db.session.add_all(users)
 
         # Seed Guests
