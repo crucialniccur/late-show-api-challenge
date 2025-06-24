@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask-jwt-extended = "*"
 psycopg2-binary = "*"
 pipenv = "*"
 shell = "*"
@@ -15,6 +14,7 @@ flask-sqlalchemy = "*"
 python-dotenv = "*"
 faker = "*"
 sqlalchemy-serializer = "*"
+flask-jwt-extended = "*"
 
 [dev-packages]
 
