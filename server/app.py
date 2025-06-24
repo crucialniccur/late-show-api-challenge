@@ -7,6 +7,7 @@ from server.extensions import db, migrate
 from server.models import User, Guest, Episode, Appearance
 from server.controllers.guest_controller import Guests
 from server.controllers.episode_controller import Episodes, EpisodeByID
+
 from server.controllers.auth_controller import auth_bp
 
 
@@ -31,6 +32,8 @@ class Home(Resource):
 api.add_resource(Home, '/')
 api.add_resource(Episodes, "/episodes")
 api.add_resource(EpisodeByID, "/episodes/<int:id>")
+api.add_resource(Appearances, "/appearances")
+
 
 app.register_blueprint(auth_bp)
 
