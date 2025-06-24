@@ -1,5 +1,8 @@
-from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask_restful import Resource
+from flask import request
+from server.models.appearance import Appearance
+from server.extensions import db
+from flask_jwt_extended import jwt_required, get_jwt_identity
 
 
 class Appearances(Resource):

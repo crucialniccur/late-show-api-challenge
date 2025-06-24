@@ -34,6 +34,7 @@ api.add_resource(Home, '/')
 api.add_resource(Episodes, "/episodes")
 api.add_resource(EpisodeByID, "/episodes/<int:id>")
 api.add_resource(Appearances, "/appearances")
+api.add_resource(Guests, "/guests")
 
 
 app.register_blueprint(auth_bp)
